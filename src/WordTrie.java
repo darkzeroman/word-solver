@@ -3,7 +3,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class WordTrie {
-	Node root = new Node();
+	final Node root = new Node();
 
 	public void addWord(String word) {
 
