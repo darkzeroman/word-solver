@@ -11,6 +11,8 @@ public class WordTrie {
 
 		for (int i = 0; i < word.length(); i++) {
 			char character = word.charAt(i);
+			
+			// add the child node if it doesn't exist
 			if (!currNode.children.containsKey(character)) {
 				currNode.addChild(character);
 			}
@@ -22,6 +24,7 @@ public class WordTrie {
 
 	public boolean hasWord(String word) {
 		Node currNode = root;
+		
 		for (int i = 0; i < word.length(); i++) {
 			char character = word.charAt(i);
 			if (!currNode.children.containsKey(character)) {
@@ -35,6 +38,7 @@ public class WordTrie {
 
 	public boolean isValidPrefix(String prefix) {
 		Node currNode = root;
+		
 		for (int i = 0; i < prefix.length(); i++) {
 			char character = prefix.charAt(i);
 			if (!currNode.children.containsKey(character)) {

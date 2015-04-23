@@ -6,18 +6,15 @@ import org.junit.Test;
 public class WordTrieTest {
 
 	@Test
-	public void testSimple() {
-		WordTrie wordTrie = new WordTrie();
-		wordTrie.addWord("racecar");
-		assertFalse(wordTrie.hasWord("race"));
-		assertTrue(wordTrie.hasWord("racecar"));
-	}
-
-	@Test
-	public void testCheckWord() {
+	public void testSimpleInput() {
 		WordTrie wordTrie = new WordTrie();
 		wordTrie.addWord("at");
 		wordTrie.addWord("attack");
+		wordTrie.addWord("racecar");
+
+		assertFalse(wordTrie.hasWord("race"));
+		assertTrue(wordTrie.hasWord("racecar"));
+
 		assertFalse(wordTrie.hasWord("att"));
 		assertTrue(wordTrie.hasWord("attack"));
 		assertTrue(wordTrie.hasWord("at"));
